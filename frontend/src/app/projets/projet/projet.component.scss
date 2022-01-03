@@ -1,0 +1,174 @@
+@import "../../../styles.scss";
+
+.container {
+    background-color: $snow;
+    height: fit-content;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    border: 2px $coal solid;
+    box-shadow: 6px 6px 5px 1px rgba(0, 0, 255, .2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    transition-property: box-shadow border;
+    transition-duration: 0.4s;
+}
+
+.container:hover {
+    border: 2px $coal solid;
+    box-shadow: 12px 12px 10px 1px rgba(0, 0, 255, .2);
+    cursor: pointer;
+    transition-property: box-shadow border;
+    transition-duration: 0.4s;
+}
+
+.container-image {
+    width: 50%;
+    max-height: 4560px;
+    padding: 10px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-image img {
+    max-width: 100%;
+    max-height: 450px;
+    border: 2px $moon solid;
+}
+
+.container-infos {
+    width: 50%;
+    height: 450px;
+    padding: 10px;
+    display: grid;
+    grid-template:  "titre titre titre etat etat etat" 20%
+                    "client dateDebut dateMaj dateMaj dateFin dateFin" 10%
+                    "description description description tags tags tags" 55%
+                    "description description description liens liens liens" 15%
+                    / 40% 20% 10% 10% 10% 10%;
+}
+
+.titre {
+    grid-area: titre;display: flex;
+    justify-content: left;
+    align-items: center;
+    border-bottom: 1px solid $silver;
+    border-right: 1px solid $silver;
+}
+
+.titre p {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.avorted {
+    grid-area: etat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $silver;
+    border-left: 1px solid $silver;
+    background-color: $failure;
+}
+
+.encours {
+    grid-area: etat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $silver;
+    border-left: 1px solid $silver;
+    background-color: $warning;
+}
+
+.termined {
+    grid-area: etat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $silver;
+    border-left: 1px solid $silver;
+    background-color: $success;
+}
+
+.client {
+    grid-area: client;
+    display: flex;
+    justify-content: left;
+    align-items: center; 
+    border-top: 1px solid $silver;
+    border-right: 1px solid $silver;
+    border-bottom: 1px solid $silver;
+}
+
+.dateDebut {
+    grid-area: dateDebut;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $silver;
+    border-right: 1px solid $silver;
+    border-bottom: 1px solid $silver;
+    border-left: 1px solid $silver;
+}
+
+.dateMaj {
+    grid-area: dateMaj;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $silver;
+    border-right: 1px solid $silver;
+    border-bottom: 1px solid $silver;
+    border-left: 1px solid $silver;
+}
+
+.dateFin {
+    grid-area: dateFin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $silver;
+    border-right: 1px solid $silver;
+    border-bottom: 1px solid $silver;
+    border-left: 1px solid $silver;
+}
+
+.description {
+    grid-area: description;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $silver;
+    border-right: 1px solid $silver;
+    padding: 20px;
+}
+
+.tags {
+    grid-area: tags;
+    display:table-row;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $silver;
+    border-bottom: 1px solid $silver;
+    border-left: 1px solid $silver;
+}
+
+.tags p {
+    color: $moon;
+}
+
+.liens {
+    grid-area: liens;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $silver;
+    border-left: 1px solid $silver;
+}

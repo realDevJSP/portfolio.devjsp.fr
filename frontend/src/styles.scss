@@ -1,0 +1,30 @@
+$blue: #0061FF;
+$sky: #369FFF;
+$silver: #CCCCCC;
+$coal: #333333;
+$black: #000000;
+$moon: #999999;
+$snow: #FFFFFF;
+$nickel: #666666;
+$success: #2ECC71;
+$failure: #E74C3C;
+$warning: #F1C40F;
+
+* {
+    font-family: Roboto, Helvetica, sans-serif;
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}

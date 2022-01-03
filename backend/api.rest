@@ -1,0 +1,30 @@
+GET http://localhost:3000/projets
+
+###
+
+GET http://localhost:3000/projets
+
+
+###
+
+POST http://localhost:3000/projets
+content-type: application/json
+
+{
+    "id": 2,
+    "titre": "Projet Test MEAN Stack",
+    "nom_client": "DevJSP",
+    "etat": 1,
+    "date_debut": "2018-06-10",
+    "tags": ["test", "node", "express", "mongodb"],
+    "description": "Ceci est un test",
+    "chemin_galerie": "../../assets/projets/cv/"
+}
+
+###
+
+PATCH http://localhost:3000/projets/
+
+###
+
+DELETE http://localhost:3000/projets/61d2fa43dca3a6b081d3fe84

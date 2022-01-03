@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="container-image">
+        <img [src]=projet.miniature>   
+
+    </div>
+    
+    <div class="container-infos">
+        <div class="titre"><p>{{projet.titre}}</p></div>
+        <div [ngClass]="{ 'avorted': projet.etat === -1, 'encours': projet.etat === 0, termined: projet.etat === 2 }">
+            <p *ngIf="projet.etat === -1">Avorté</p>
+            <p *ngIf="projet.etat === 0">En cours</p>
+            <p *ngIf="projet.etat === 1">En attente</p>
+            <p *ngIf="projet.etat === 2">Terminé</p>
+        </div>
+        <div class="client"><p>Client : {{projet.nomClient}}</p></div>
+        <div class="dateDebut"><img src="../../../assets/dateDebut.png" style="max-height: 20px"><p>{{ projet.dateDebut | date: 'dd/MM/yyyy' }}</p></div>
+        <div class="dateMaj"><img src="../../../assets/dateMaj.png" style="max-height: 20px"><p *ngIf="projet.dateMAJ;else dateUndefined">{{ projet.dateMAJ | date: 'dd/MM/yyyy' }}</p></div>
+        <div class="dateFin"><img src="../../../assets/dateFin.png" style="max-height: 20px"><p *ngIf="projet.dateFin;else dateUndefined">{{ projet.dateFin | date: 'dd/MM/yyyy' }}</p></div>
+        <ng-template #dateUndefined><p>-- / -- / ----</p></ng-template>
+        <div class="description"><p>{{projet.description}}</p></div>
+        <div class="tags">
+            <p *ngFor="let tag of projet.tags">{{tag}}</p>
+        </div>
+        <div class="liens">
+            <a *ngIf="projet.lienDirect" [href]="projet.lienDirect" target="_blank"><img src="../../../assets/lienDirect.png" style="max-height: 40px"></a>
+            <a *ngIf="projet.lienGithub" [href]="projet.lienGithub" target="_blank"><img src="../../../assets/lienGithub.png" style="max-height: 40px"></a>
+        </div>
+    </div>
+</div>
