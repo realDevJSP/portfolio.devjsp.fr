@@ -1,10 +1,163 @@
 @import "../../styles.scss";
 
 .container {
-    height: 100%;
+    height: fit-content;
+    padding-bottom: 20px;
     width: 100%;
     background-color: $silver;
-    padding-top: 200px;
-    position: fixed;
+    padding-top: 130px;
+}
+
+.container-presentation {
+    background-color: $snow;
+    height: 100%;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+
+    display: grid;
+    grid-template:  "photo presentation presentation" 30%
+                    "citation1 citation2 citation3" 10%
+                    "skills1 skills1 skills1" 5%
+                    "skills2 skills2 skills2" 2%
+                    "langages logiciels autres" 8%
+                    "listlangages listlogiciels listautres" 45%
+                    / 33% 34% 33%;
+
+    border: 2px $coal solid;
+    box-shadow: 6px 6px 5px 1px rgba(0, 0, 255, .2);
+}
+
+.photo {
+    grid-area: photo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.photo img {
+    height: 100%;
+}
+
+.presentation {
+    grid-area: presentation;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.citation1 {
+    grid-area: citation1;
+    display: flex;
+    justify-content: center;
     text-align: center;
+    align-items: center;
+    color: $moon;
+    margin-bottom: 70px;
+}
+
+.citation2 {
+    grid-area: citation2;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: $moon;
+    margin-bottom: 70px;
+}
+
+.citation3 {
+    grid-area: citation3;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: $moon;
+    margin-bottom: 70px;
+}
+
+.skills1 {
+    grid-area: skills1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills2 {
+    grid-area: skills2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $nickel;
+}
+
+.langages {
+    grid-area: langages;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $coal;
+}
+
+.logiciels {
+    grid-area: logiciels;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $coal;
+}
+
+.autres {
+    grid-area: autres;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $coal;
+}
+
+.listlangages {
+    grid-area: listlangages;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $coal;
+    height: fit-content;
+}
+
+.listlogiciels {
+    grid-area: listlogiciels;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $coal;
+    height: fit-content;
+}
+
+.listautres {
+    grid-area: listautres;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $coal;
+    height: fit-content;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding-top: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+li img {
+    max-height: 35px;
+    margin-right: 20px;
 }

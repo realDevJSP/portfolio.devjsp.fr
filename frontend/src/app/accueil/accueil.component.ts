@@ -15,6 +15,6 @@ export class AccueilComponent implements OnInit {
 
   ngOnInit(): void {
     this.nom = "Julien Salgueiro Pereira";
-    this.titre = "Développeur Indépendant";
+    this.titre = "Développeur";
   }
 }

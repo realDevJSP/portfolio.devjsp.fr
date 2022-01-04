@@ -28,7 +28,7 @@
 
 .container-image {
     width: 50%;
-    max-height: 4560px;
+    max-height: 450px;
     padding: 10px;
     padding-right: 30px;
     display: flex;
@@ -55,7 +55,8 @@
 }
 
 .titre {
-    grid-area: titre;display: flex;
+    grid-area: titre;
+    display: flex;
     justify-content: left;
     align-items: center;
     border-bottom: 1px solid $silver;
