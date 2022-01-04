@@ -1,20 +1,20 @@
 <div class="container">
-    <div class="container-presentation">
-        <div class="photo"><img src="../../assets/profil.png"></div>
-        <div class="presentation"><p>Julien Salgueiro Pereira, 26 ans, Gémeaux, Doggo Enthusiast.<br /><br /><br />J'aime le cinéma et surtout Wes Anderson, j'aime la musique et surtout le rap français (parfois ...), j'aime la culture japonaise et surtout les Kamehamehas.<br /><br /><br />Des fois je fais des sites internets, des logiciels ou des applications sympathiques.</p></div>
-        <div class="citation1"><i>"Après nous, le déluge."</i><br /><br /><br />- Madame de Pompadour -</div>
-        <div class="citation2"><i>"Rien de grand ne s'est accompli dans le monde sans passion."</i><br /><br /><br />- Georg Wilhelm Friedrich Hegel -</div>
-        <div class="citation3"><i>"KONO DIO DA !"</i><br /><br /><br />- Dio Brando -</div>
-        <div class="skills1">
+    <div class="container-presentation" (click)="initialise()">
+        <div class="photo" [@etatInitialisation]="initialisation"><img src="../../assets/profil.png"></div>
+        <div class="presentation" [@etatInitialisation]="initialisation"><p>Julien Salgueiro Pereira, 26 ans, Gémeaux, Doggo Enthusiast.<br /><br /><br />J'aime le cinéma et surtout Wes Anderson, j'aime la musique et surtout le rap français (parfois ...), j'aime la culture japonaise et surtout les Kamehamehas.<br /><br /><br />Des fois je fais des sites internets, des logiciels ou des applications sympathiques.</p></div>
+        <div class="citation1" [@etatInitialisation]="initialisation"><i>"Après nous, le déluge."</i><br /><br /><br />- Madame de Pompadour -</div>
+        <div class="citation2" [@etatInitialisation]="initialisation"><i>"Rien de grand ne s'est accompli dans le monde sans passion."</i><br /><br /><br />- Georg Wilhelm Friedrich Hegel -</div>
+        <div class="citation3" [@etatInitialisation]="initialisation"><i>"KONO DIO DA !"</i><br /><br /><br />- Dio Brando -</div>
+        <div class="skills1" [@etatInitialisation]="initialisation">
             <h1>Compétences</h1>
         </div>
-        <div class="skills2">
+        <div class="skills2" [@etatInitialisation]="initialisation">
             <p>Acquises lors de mon cursus scolaire ou en autodidacte.</p>
         </div>
-        <div class="langages">
+        <div class="langages" [@etatInitialisation]="initialisation">
             <h2>Langages et technologies</h2>
         </div>
-        <div class="listlangages">
+        <div class="listlangages" [@etatInitialisation]="initialisation">
             <ul>
                 <li><img src="../../assets/icones/icons8-typescript.svg">TypeScript</li>
                 <li><img src="../../assets/icones/wlangage_bw_332x332.png">W-Langages</li>
@@ -29,10 +29,10 @@
                 <li><img src="../../assets/icones/icons8-javascript.svg">JavaScript</li>
             </ul>
         </div>
-        <div class="logiciels">
+        <div class="logiciels" [@etatInitialisation]="initialisation">
             <h2>Logiciels et environnements</h2>
         </div>
-        <div class="listlogiciels">
+        <div class="listlogiciels" [@etatInitialisation]="initialisation">
             <ul>
                 <li><img src="../../assets/icones/icons8-linux-52.png">Linux</li>
                 <li><img src="../../assets/icones/icons8-windows-11.svg">Windows</li>
@@ -44,10 +44,10 @@
                 <li><img src="../../assets/icones/icons8-libre-office-suite.svg">Libre Office</li>
             </ul>
         </div>
-        <div class="autres">
+        <div class="autres" [@etatInitialisation]="initialisation">
             <h2>Autres compétences</h2>
         </div>
-        <div class="listautres">
+        <div class="listautres" [@etatInitialisation]="initialisation">
             <ul>
                 <li><img src="../../assets/icones/icons8-système-d'information-96.png">Administration système</li>
                 <li><img src="../../assets/icones/icons8-architecture-du-produit-96.png">Architecture des réseaux</li>
