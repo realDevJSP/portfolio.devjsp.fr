@@ -39,6 +39,7 @@
 
 .photo img {
     height: 100%;
+    max-height: 250px; 
 }
 
 .presentation {
@@ -47,6 +48,7 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    padding-right: 100px;
     font-size: 20px;
 }
 
@@ -58,6 +60,7 @@
     align-items: center;
     color: $moon;
     margin-bottom: 70px;
+    padding-left: 50px;
 }
 
 .citation2 {
@@ -68,6 +71,7 @@
     align-items: center;
     color: $moon;
     margin-bottom: 70px;
+    padding-left: 50px;
 }
 
 .citation3 {
@@ -78,6 +82,7 @@
     align-items: center;
     color: $moon;
     margin-bottom: 70px;
+    padding-left: 50px;
 }
 
 .skills1 {
@@ -85,6 +90,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
+    padding-top: 30px;
 }
 
 .skills2 {
@@ -93,6 +100,7 @@
     justify-content: center;
     align-items: center;
     color: $nickel;
+    padding-top: 30px;
 }
 
 .langages {
@@ -101,6 +109,8 @@
     justify-content: center;
     align-items: center;
     color: $coal;
+    height: fit-content;
+    padding-top: 30px;
 }
 
 .logiciels {
@@ -109,6 +119,8 @@
     justify-content: center;
     align-items: center;
     color: $coal;
+    height: fit-content;
+    padding-top: 30px;
 }
 
 .autres {
@@ -117,6 +129,8 @@
     justify-content: center;
     align-items: center;
     color: $coal;
+    height: fit-content;
+    padding-top: 30px;
 }
 
 .listlangages {
@@ -148,6 +162,7 @@
 
 ul {
     list-style-type: none;
+    padding-right: 50px;
 }
 
 li {
