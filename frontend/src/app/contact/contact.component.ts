@@ -1,6 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { trigger, state, style, animate, transition } from '@angular/animations';
+
+import { ContactService } from '../_services/contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -40,11 +43,21 @@ export class ContactComponent implements OnInit {
   @Input() initialisation!: string;
   @Input() position!: string;
 
-  constructor() { }
+  FormData!: FormGroup;
+
+  constructor(private contactService: ContactService, private builder: FormBuilder) { }
 
   ngOnInit(): void {
     this.initialisation = "nonDebutee";
     this.position = "droite";
+    this.FormData = this.builder.group({
+      nomComplet: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      message: new FormControl('', [Validators.required])
+    })
   }
 
+  envoyerMail(mail: any): void {
+    this.contactService.PostMessage(mail);
+  }
 }

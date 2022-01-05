@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import 'rxjs/add/operator/map';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
