@@ -41,14 +41,18 @@ a {
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
+    transition-property: box-shadow border;
+    transition-duration: 0.5s;
 }
 
 a.active {
     color: $snow;
+    cursor: default;
 }
 
 a:hover:not(.active) {
     color: $silver;
+    cursor: pointer;
 }
 
 .container-page {

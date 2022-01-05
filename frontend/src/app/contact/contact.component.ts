@@ -37,11 +37,13 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class ContactComponent implements OnInit {
 
+  @Input() initialisation!: string;
   @Input() position!: string;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.initialisation = "nonDebutee";
     this.position = "droite";
   }
 

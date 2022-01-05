@@ -36,17 +36,30 @@ import { ProjetsService } from '../_services/projets.service';
       transition('droite => actuelle', animate('1000ms ease')),
       transition('droite => gauche', animate('1000ms ease')),
       transition('droite => droite2', animate('1000ms ease')),
+    ]),
+    trigger('etatInitialisation', [
+      state('terminee', style({
+        'transform': 'translateY(0%)',
+        'opacity': '100%'
+      })),
+      state('nonDebutee', style({
+        'transform': 'translateY(200px)',
+        'opacity': '0%'
+      })),
+      transition('nonDebutee => terminee', animate('500ms ease'))
     ])
   ]
 })
 export class ProjetsComponent implements OnInit {
 
+  @Input() initialisation!: string
   @Input() position!: string;
   mesProjets!: Projet[];
 
   constructor(private projetsService: ProjetsService) { }
 
   ngOnInit(): void {
+    this.initialisation = "nonDebutee";
     this.position = "droite2";
     this.mesProjets = this.projetsService.projets;
   }

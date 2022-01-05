@@ -49,7 +49,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 export class PresentationComponent implements OnInit {
 
   @Input() position!: string;
-  initialisation!: string;
+  @Input() initialisation!: string;
 
   constructor() {
   }
@@ -58,11 +58,4 @@ export class PresentationComponent implements OnInit {
     this.position = "droite";
     this.initialisation = "nonDebutee";
   }
-
-  initialise(): void {
-    if(this.initialisation === 'nonDebutee'){
-      this.initialisation = 'terminee';
-    }
-  }
-
 }

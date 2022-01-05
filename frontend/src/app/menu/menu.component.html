@@ -1,16 +1,16 @@
 <div class="container">
     <img class="logo" src="../../assets/Logo_Portfolio_Horizontal_transparence.png" alt="DevJSP - Portfolio">
     <nav>
-        <div class="container-menu"><a (click)="goToPage(1)">Accueil</a></div>
-        <div class="container-menu"> <a (click)="goToPage(2)">Présentation</a></div>
-        <div class="container-menu"><a (click)="goToPage(3)">Projets</a></div>
-        <div class="container-menu"><a (click)="goToPage(4)">Contact</a></div>
+        <div class="container-menu"><a [ngClass]="{ 'active': pageActuelle === 1 }" (click)="goToPage(1)">Accueil</a></div>
+        <div class="container-menu"> <a [ngClass]="{ 'active': pageActuelle === 2 }" (click)="goToPage(2)">Présentation</a></div>
+        <div class="container-menu"><a [ngClass]="{ 'active': pageActuelle === 3 }" (click)="goToPage(3)">Projets</a></div>
+        <div class="container-menu"><a [ngClass]="{ 'active': pageActuelle === 4 }" (click)="goToPage(4)">Contact</a></div>
     </nav>
 </div>
 
 <div class="container-page">
     <app-accueil position={{positionAccueil}}></app-accueil>
-    <app-presentation position={{positionPresentation}}></app-presentation>
-    <app-projets position={{positionProjets}}></app-projets>
-    <app-contact position={{positionContact}}></app-contact>
+    <app-presentation position={{positionPresentation}} initialisation={{initialisationPresentation}}></app-presentation>
+    <app-projets position={{positionProjets}} initialisation={{initialisationProjets}}></app-projets>
+    <app-contact position={{positionContact}} initialisation={{initialisationContact}}></app-contact>
 </div>

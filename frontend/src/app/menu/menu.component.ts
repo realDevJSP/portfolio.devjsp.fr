@@ -8,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
 
   pageActuelle!: number;
+
   positionAccueil!: string;
   positionPresentation!: string;
   positionProjets!: string;
   positionContact!: string;
+
+  initialisationAccueil!: string;
+  initialisationPresentation!: string;
+  initialisationProjets!: string;
+  initialisationContact!: string;
 
   constructor() {
     this.pageActuelle = 1;
@@ -19,6 +25,10 @@ export class MenuComponent implements OnInit {
     this.positionPresentation = "droite";
     this.positionProjets = "droite2";
     this.positionContact = "droite3";
+
+    this.initialisationPresentation = "nonDebutee";
+    this.initialisationProjets = "nonDebutee";
+    this.initialisationContact = "nonDebutee";
   }
 
   ngOnInit(): void {
@@ -116,7 +126,7 @@ export class MenuComponent implements OnInit {
               break;
             case 3:
               this.positionAccueil = "gauche2";
-              this.positionPresentation = "gauche2*";
+              this.positionPresentation = "gauche";
               this.positionProjets = "actuelle";
               this.positionContact = "droite";
               break;
@@ -130,5 +140,24 @@ export class MenuComponent implements OnInit {
     }
 
     this.pageActuelle = pageDestination;
+    setTimeout(() => {
+      this.init(pageDestination);
+    }, 1000);
+  }
+
+  init(numPage: number): void {
+    switch(numPage){
+      case 2:
+        this.initialisationPresentation = "terminee";
+        break;
+      case 3:
+        this.initialisationProjets = "terminee";
+        break;
+      case 4:
+        this.initialisationContact = "terminee";
+        break;
+      default:
+        break;
+    }
   }
 }

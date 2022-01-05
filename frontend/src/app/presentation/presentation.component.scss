@@ -1,11 +1,11 @@
 @import "../../styles.scss";
 
 .container {
-    height: fit-content;
-    padding-bottom: 20px;
+    height: 80%;
+    margin-bottom: 20px;
     width: 100%;
     background-color: $silver;
-    padding-top: 130px;
+    margin-top: 130px;
     position: fixed;
 }
 
@@ -18,13 +18,10 @@
     margin-bottom: 50px;
 
     display: grid;
-    grid-template:  "photo presentation presentation" 30%
-                    "citation1 citation2 citation3" 10%
-                    "skills1 skills1 skills1" 5%
-                    "skills2 skills2 skills2" 2%
-                    "langages logiciels autres" 8%
-                    "listlangages listlogiciels listautres" 45%
-                    / 33% 34% 33%;
+    grid-template:  "photo presentation presentation presentation" 32%
+                    "langages langages logiciels autres" 8%
+                    "listlangages listlangages listlogiciels listautres" 60%
+                    / 25% 8% 34% 33%;
 
     border: 2px $coal solid;
     box-shadow: 6px 6px 5px 1px rgba(0, 0, 255, .2);
@@ -35,7 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
 }
 
 .photo img {
@@ -48,60 +45,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
     padding-right: 100px;
-    font-size: 20px;
-}
-
-.citation1 {
-    grid-area: citation1;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    color: $moon;
-    margin-bottom: 70px;
-    padding-left: 50px;
-}
-
-.citation2 {
-    grid-area: citation2;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    color: $moon;
-    margin-bottom: 70px;
-    padding-left: 50px;
-}
-
-.citation3 {
-    grid-area: citation3;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    color: $moon;
-    margin-bottom: 70px;
-    padding-left: 50px;
-}
-
-.skills1 {
-    grid-area: skills1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    padding-top: 30px;
-}
-
-.skills2 {
-    grid-area: skills2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $nickel;
-    padding-top: 30px;
+    font-size: 16px;
 }
 
 .langages {
@@ -111,7 +57,7 @@
     align-items: center;
     color: $coal;
     height: fit-content;
-    padding-top: 30px;
+    padding-bottom: 10px;
 }
 
 .logiciels {
@@ -121,7 +67,7 @@
     align-items: center;
     color: $coal;
     height: fit-content;
-    padding-top: 30px;
+    padding-bottom: 10px;
 }
 
 .autres {
@@ -131,7 +77,7 @@
     align-items: center;
     color: $coal;
     height: fit-content;
-    padding-top: 30px;
+    padding-bottom: 10px;
 }
 
 .listlangages {
@@ -174,6 +120,6 @@ li {
 }
 
 li img {
-    max-height: 35px;
+    max-height: 25px;
     margin-right: 20px;
 }
