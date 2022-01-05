@@ -1,13 +1,16 @@
 <div class="container">
     <img class="logo" src="../../assets/Logo_Portfolio_Horizontal_transparence.png" alt="DevJSP - Portfolio">
     <nav>
-        <div class="container-menu"><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a></div>
-        <div class="container-menu"> <a routerLink ="presentation" routerLinkActive="active">Présentation</a></div>
-        <div class="container-menu"><a routerLink ="projets" routerLinkActive="active">Projets</a></div>
-        <div class="container-menu"><a routerLink ="contact" routerLinkActive="active">Contact</a></div>
+        <div class="container-menu"><a (click)="goToPage(1)">Accueil</a></div>
+        <div class="container-menu"> <a (click)="goToPage(2)">Présentation</a></div>
+        <div class="container-menu"><a (click)="goToPage(3)">Projets</a></div>
+        <div class="container-menu"><a (click)="goToPage(4)">Contact</a></div>
     </nav>
 </div>
 
-<div class="container-fond">
-
+<div class="container-page">
+    <app-accueil position={{positionAccueil}}></app-accueil>
+    <app-presentation position={{positionPresentation}}></app-presentation>
+    <app-projets position={{positionProjets}}></app-projets>
+    <app-contact position={{positionContact}}></app-contact>
 </div>
