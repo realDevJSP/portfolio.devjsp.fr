@@ -28,24 +28,4 @@ export class ContactService {
         }
       );
   };
-
-
-
-
-
-  //   this.http.post(this.api, JSON.stringify(input), { headers: this.myHeaders, responseType: 'text' })
-  //   .pipe(first())
-  //   .toPromise()
-  //   .then((response: any) => {
-  //         if (response) {
-  //           console.log(response);
-  //           return response;
-  //         }
-  //       })
-  //       .catch((error: any) => {
-  //         console.log(error);
-  //         return error;
-  //       }
-  //     );
-  // }
 }
