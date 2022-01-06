@@ -8,11 +8,31 @@ app.use(express.json());
 app.use((req, res, next) => {
 	res.header("Access-Control-Allow-Origin", "*");
 	res.header("Access-Control-Allow-Methods", "GET, POST, HEAD, OPTIONS, PUT, PATCH, DELETE");
-	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, X-Auth-Token, Authorization");
 	next();
 });
 
-
+app.post('/sendmail', function(res, req){
+	// using Twilio SendGrid's v3 Node.js Library
+	// https://github.com/sendgrid/sendgrid-nodejs
+	const sgMail = require('@sendgrid/mail')
+	sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+	const msg = {
+		to: 'contact@devjsp.fr', // Change to your recipient
+		from: 'contact@devjsp.fr', // Change to your verified sender
+		subject: req.req.body.nomComplet+' ( ' + req.req.body.email + ' ) vous contacte via portfolio.devjsp.fr',
+		text: req.req.body.message,
+		html: '<strong>'+req.req.body.message+'</strong>',
+	}
+	sgMail
+	.send(msg)
+	.then(() => {
+		console.log('Email sent')
+	})
+	.catch((error) => {
+		console.error(error)
+	})
+})
 
 app.get('/projets', (req, res) => {
 	Projet.find({})

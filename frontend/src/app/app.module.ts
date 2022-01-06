@@ -17,6 +17,7 @@ import { ContactComponent } from './contact/contact.component';
 import { registerLocaleData } from '@angular/common';
 import * as fr from '@angular/common/locales/fr';
 
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [

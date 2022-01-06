@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs/operators';
+import { first } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -7,22 +7,45 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ContactService {
   
-  private api = 'https://mailthis.to/contact@devjsp.fr';
+  readonly ROOT_URL;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.ROOT_URL = "http://devjsp.org:3000/sendmail";
+  }
 
   PostMessage(input: any) {
-    return this.http.post(this.api, input, { responseType: 'text' }).pipe(
-      map(
-        (response: any) => {
+    this.http.post(this.ROOT_URL, input).pipe(first())
+    .toPromise()
+    .then((response: any) => {
           if (response) {
+            console.log(response);
             return response;
           }
-        },
-        (error: any) => {
+        })
+        .catch((error: any) => {
+          console.log(error);
           return error;
         }
-      )
-    )
-  }
+      );
+  };
+
+
+
+
+
+  //   this.http.post(this.api, JSON.stringify(input), { headers: this.myHeaders, responseType: 'text' })
+  //   .pipe(first())
+  //   .toPromise()
+  //   .then((response: any) => {
+  //         if (response) {
+  //           console.log(response);
+  //           return response;
+  //         }
+  //       })
+  //       .catch((error: any) => {
+  //         console.log(error);
+  //         return error;
+  //       }
+  //     );
+  // }
 }

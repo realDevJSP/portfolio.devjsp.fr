@@ -58,6 +58,6 @@ export class ContactComponent implements OnInit {
   }
 
   envoyerMail(mail: any): void {
-    this.contactService.PostMessage(mail);
+    console.log(this.contactService.PostMessage(mail));
   }
 }

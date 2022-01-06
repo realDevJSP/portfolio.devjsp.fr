@@ -50,7 +50,7 @@ export class ProjetsService {
     }
 
     getProjet(id: number) {
-        const result = this.http.get("http://devjsp.org:3000/projets/" + `${id}`)
+        const result = this.http.get("http://devjsp.fr:3000/projets/" + `${id}`)
             .pipe(first())
             .toPromise()
             .then((response: any) => {
@@ -74,7 +74,7 @@ export class ProjetsService {
 
     getProjets() {
         this.projets = [];
-        const result = this.http.get("http://devjsp.org:3000/projets")
+        const result = this.http.get("http://devjsp.fr:3000/projets")
             .pipe(first())
             .toPromise()
             .then((response: any) => {
