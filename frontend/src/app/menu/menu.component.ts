@@ -142,7 +142,7 @@ export class MenuComponent implements OnInit {
     this.pageActuelle = pageDestination;
     setTimeout(() => {
       this.init(pageDestination);
-    }, 1000);
+    }, 500);
   }
 
   init(numPage: number): void {

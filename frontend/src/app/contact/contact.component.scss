@@ -1,10 +1,170 @@
 @import "../../styles.scss";
 
 .container {
-    height: 100%;
+    height: 80%;
+    margin-bottom: 20px;
     width: 100%;
     background-color: $silver;
-    padding-top: 200px;
+    margin-top: 130px;
     position: fixed;
-    text-align: center;
+}
+
+.container-contact {
+    background-color: $snow;
+    height: 100%;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+
+    display: grid;
+    grid-template:  "titreContact titreContact separateur titreFormulaire titreFormulaire" 20%
+                    "telLabel telInfo separateur formulaire formulaire" 20%
+                    "telLabel telInfo separateur formulaire formulaire" 20%
+                    "mailLabel mailInfo separateur formulaire formulaire" 20%
+                    "mailLabel mailInfo separateur formulaire formulaire" 20%
+                    / 19% 30% 2% 19% 30%;
+
+    border: 2px $coal solid;
+    box-shadow: 6px 6px 5px 1px rgba(0, 0, 255, .2);
+}
+
+.titreContact {
+    grid-area: titreContact;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.telLabel {
+    grid-area: telLabel;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.telInfo {
+    grid-area: telInfo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mailLabel {
+    grid-area: mailLabel;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mailInfo {
+    grid-area: mailInfo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.separateur {
+    background-color: $coal;
+    grid-area: separateur;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 10px;
+}
+
+.titreForm {
+    grid-area: titreFormulaire;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulaire {
+    grid-area: formulaire;
+    display: grid;
+    grid-template:  "nomLabel nomInput" 10%
+                    "mailLabel mailInput" 10%
+                    "messageLabel messageInput" 70%
+                    "submit submit" 10%
+                    / 25% 75%;
+    justify-content: center;
+}
+
+.nomLabel {
+    grid-area: nomLabel;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nomInput {
+    grid-area: nomInput;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mailLabel {
+    grid-area: mailLabel;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mailInput {
+    grid-area: mailInput;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.messageLabel {
+    grid-area: messageLabel;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.messageInput {
+    grid-area: messageInput;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nomInput input {
+    width: 100%;
+    height: 85%;
+    margin-right: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.mailInput input {
+    width: 100%;
+    height: 85%;
+    margin-right: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.messageInput textarea {
+    width: 100%;
+    height: 85%;
+    margin-right: 50px;
+    padding: 10px;
+}
+
+.submit {
+    grid-area: submit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sumbit button {
+    width: 70%;
+    height: 85%;
 }

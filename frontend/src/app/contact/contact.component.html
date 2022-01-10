@@ -1,23 +1,32 @@
 <div class="container" [@position]="position">
-    <h2 class="text-center mb-5">Envoyez moi des mots doux</h2>
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <form action="https://mailthis.to/my_email@yahoo.com" method="POST" encType="multipart/form-data" [formGroup]="FormData" (ngSubmit)="envoyerMail(FormData.value)">
-                <div class="form-group">
-                    <label for="fullname">Nom complet :</label>
-                    <input type="text" class="form-control" name="name" placeholder="ex: Julien Salgueiro Pereira" formControlName="nomComplet">
-                </div>
-                <div class="form-group">
-                    <label for="Email">E-Mail</label>
-                    <input type="email" class="form-control" name="_replyto" aria-describedby="emailHelp" placeholder="ex: contact@devjsp.fr"formControlName="email">
-                    <small id="emailHelp" class="form-text text-muted">Votre adresse e-mail ne sera pas partagée.</small>
-                </div>
-                <div class="form-group">
-                    <label for="comment">Message</label>
-                    <textarea class="form-control" formControlName="message" name="message"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" [disabled]="!FormData.valid">Envoyer</button>
-            </form>
+    <div class="container-contact">
+        <div class="titreContact">
+            <h2 class="text-center mb-5" [@etatInitialisation]="initialisation">Contactez moi</h2>
         </div>
+        <div class="telLabel">
+            <p>Téléphone :</p>
+        </div>
+        <div class="telInfo">
+            <p>06 . 32 . 24 . 28 . 10</p>
+        </div>
+        <div class="mailLabel">
+            <p>E-Mail :</p>
+        </div>
+        <div class="mailInfo">
+            <p>contact@devjsp.fr</p>
+        </div>
+        <div class="separateur"></div>
+        <div class="titreForm">
+            <h2 class="text-center mb-5" [@etatInitialisation]="initialisation">Envoyez moi des mots doux</h2>
+        </div>
+        <form class="formulaire" [formGroup]="FormData" (ngSubmit)="envoyerMail(FormData.value)">
+            <div class="nomLabel"><label for="name">Nom complet :</label></div>
+            <div class="nomInput"><input type="text" class="form-control" name="name" placeholder="ex: Julien Salgueiro Pereira" formControlName="nomComplet"></div>
+            <div class="mailLabel"><label for="email">E-Mail :</label></div>
+            <div class="mailInput"><input type="email" class="form-control" name="_replyto" aria-describedby="emailHelp" placeholder="ex: contact@devjsp.fr"formControlName="email"></div>
+            <div class="messageLabel"><label for="message">Message :</label></div>
+            <div class="messageInput"><textarea formControlName="message" name="message"></textarea></div>
+            <div class="submit"><button type="submit" class="btn btn-primary" [disabled]="!FormData.valid">Envoyer</button></div>
+        </form>
     </div>
 </div>
